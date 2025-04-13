@@ -1,0 +1,20 @@
+#include <stdio.h>
+ 
+ void numbers(int num){
+  if(num < 0 ){
+   return;
+  }
+  
+     numbers(num - 1);
+  printf(" %d",num);
+  }
+
+
+
+ int main(){
+  int num = 0;  
+  printf("Enter the value");
+  scanf(" %d",&num);
+  numbers(num);
+  return 0;
+ }
