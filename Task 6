@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int sum_Numbers(int num){
+	if(num == 0){
+	return 0;
+}
+    return 	(num % 10) + sum_Numbers(num / 10);
+}
+
+int main(){
+	int num = 0;
+	printf("Enter the Numbers");
+	scanf("%d",&num);
+	printf("Resalt is: %d\n",sum_Numbers(num));
+	return 0;
+}
