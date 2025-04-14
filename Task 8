@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+char first_upp(const char* str){
+	if(*str == '\0'){
+	return '\0';
+}
+	if(*str >= 'A' && *str <= 'Z'){
+	return *str;
+}
+	return first_upp(str + 1);
+}
+int main(){
+	char text[100];
+	printf("Input the text");
+	scanf("%s",text);
+	char res = first_upp(text);
+	if(res != '\0'){
+	printf("Upper is:%c\n",res);
+}else{
+	printf("Ther is no Upper:\n");
+}
+	return 0;
+}	
