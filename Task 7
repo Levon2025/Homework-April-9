@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+void Binary(int num){
+	if(num != 0){
+	Binary(num / 2);
+}
+	printf("%d",num % 2);
+}
+
+int main(){
+	int num = 0;
+	printf("Enter the number");
+	scanf("%d",&num);
+	if(num == 0){
+	return 0;
+}else{
+	Binary(num);
+}
+	printf("\n");
+	return 0;
+}
